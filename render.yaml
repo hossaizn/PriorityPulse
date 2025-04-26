@@ -3,7 +3,10 @@ services:
     name: backlog-tool
     env: python
     region: oregon
-    workingDirectory: PriorityPulse/PriorityPulse
+
+    workingDirectory: PriorityPulse
+
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+
 
