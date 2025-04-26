@@ -1,0 +1,66 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <h2 class="h4 mb-0"><i class="fas fa-upload me-2"></i>Upload Your Backlog CSV</h2>
+            </div>
+            <div class="card-body">
+                <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                    <div class="mb-4">
+                        <label for="file" class="form-label">Select a CSV file with your backlog items:</label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" id="file" name="file" accept=".csv" required>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-calculator me-2"></i>Calculate RICE Scores</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-info">
+                <h3 class="h5 mb-0"><i class="fas fa-info-circle me-2"></i>About RICE Scoring</h3>
+            </div>
+            <div class="card-body">
+                <p>The RICE scoring model helps you prioritize features by calculating a score based on four factors:</p>
+                <ul class="list-unstyled ps-3">
+                    <li class="mb-2"><strong><i class="fas fa-users me-2"></i>Reach:</strong> How many users will this impact? (estimated number of users per quarter)</li>
+                    <li class="mb-2"><strong><i class="fas fa-chart-line me-2"></i>Impact:</strong> How much will this feature impact users? (Score 1-10)</li>
+                    <li class="mb-2"><strong><i class="fas fa-percentage me-2"></i>Confidence:</strong> How confident are you in your estimates? (Percentage: 0-100%)</li>
+                    <li class="mb-2"><strong><i class="fas fa-clock me-2"></i>Effort:</strong> How many "person-months" will this take? (Whole numbers like 1, 2, etc.)</li>
+                </ul>
+                <div class="rice-formula">
+                    <p class="mb-0">The formula is: <code>RICE = (Reach × Impact × Confidence/100) ÷ Effort</code></p>
+                </div>
+                <p>Higher RICE scores indicate features that should be prioritized.</p>
+
+                <div class="mt-3">
+                    <a href="{{ url_for('download_sample') }}" class="btn btn-outline-secondary">
+                        <i class="fas fa-download me-2"></i>Download Sample CSV
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-warning">
+                <h3 class="h5 mb-0"><i class="fas fa-file-csv me-2"></i>CSV Format Requirements</h3>
+            </div>
+            <div class="card-body">
+                <p>Your CSV file must include the following columns:</p>
+                <ul class="list-unstyled ps-3">
+                    <li class="mb-2"><strong><i class="fas fa-tag me-2"></i>Feature:</strong> Name or description of the feature (text)</li>
+                    <li class="mb-2"><strong><i class="fas fa-users me-2"></i>Reach:</strong> Number of users affected (numeric)</li>
+                    <li class="mb-2"><strong><i class="fas fa-chart-line me-2"></i>Impact:</strong> Impact score from 1-10 (numeric)</li>
+                    <li class="mb-2"><strong><i class="fas fa-percentage me-2"></i>Confidence:</strong> Confidence percentage from 0-100 (numeric)</li>
+                    <li class="mb-2"><strong><i class="fas fa-clock me-2"></i>Effort:</strong> Effort in person-months (numeric)</li>
+                </ul>
+                <p>Any additional columns in your CSV will be preserved in the output.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
