@@ -1,6 +1,6 @@
 # PriorityPulse
 
-# Backlog Prioritization Tool (Lightweight Version)
+# Backlog Prioritization Tool
 
 A minimal Flask-based web application that helps product teams prioritize their backlog items using the RICE scoring method. This version uses only built-in Python modules and minimal dependencies to run on restricted environments.
 
