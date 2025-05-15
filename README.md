@@ -37,8 +37,8 @@ RICE scoring helps teams make data-driven decisions about which features to prio
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/backlog-tool.git
-   cd backlog-tool
+   git clone https://github.com/hossaizn/PriorityPulse.git
+   cd prioritypulse
    ```
 
 2. Install minimal dependencies:
