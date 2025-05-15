@@ -5,6 +5,13 @@ Backlog Prioritization Tool
 
 A minimal Flask-based web application that helps product teams prioritize their backlog items using the RICE scoring method. This version uses only built-in Python modules and minimal dependencies to run on restricted environments.
 
+## Live App
+
+The Product Backlog Prioritization Tool allows you to:
+Try it out instantly here:  
+[https://hossaizn.github.io/prioritypulse-site/](https://hossaizn.github.io/prioritypulse-site/)  
+(*Redirects to the live Replit-hosted app!*)
+
 ## Project Overview
 
 The Product Backlog Prioritization Tool allows you to:
@@ -83,6 +90,16 @@ The results page displays:
 ## Sample Data
 
 A sample CSV file is provided in the `examples` directory. You can also download a sample directly from the application by clicking "Download Sample CSV" on the home page.
+
+## Tech Stack
+
+- Python 3.x
+- Flask
+- HTML/CSS (Jinja2 templating)
+- JavaScript (basic browser logic)
+- Hosted via: Replit (backend) + GitHub Pages (redirect)
+
+---
 
 ## Project Structure
 
