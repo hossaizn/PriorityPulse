@@ -8,7 +8,9 @@ A minimal Flask-based web application that helps product teams prioritize their 
 ## Live App
 
 Try it out instantly here:  
+
 [https://hossaizn.github.io/prioritypulse-site/](https://hossaizn.github.io/prioritypulse-site/)  
+
 (*Redirects to the live Replit-hosted app!*)
 
 ## Project Overview
