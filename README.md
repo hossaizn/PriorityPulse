@@ -7,7 +7,6 @@ A minimal Flask-based web application that helps product teams prioritize their 
 
 ## Live App
 
-The Product Backlog Prioritization Tool allows you to:
 Try it out instantly here:  
 [https://hossaizn.github.io/prioritypulse-site/](https://hossaizn.github.io/prioritypulse-site/)  
 (*Redirects to the live Replit-hosted app!*)
